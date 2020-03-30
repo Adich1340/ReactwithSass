@@ -1,0 +1,84 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin displayCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: #EEE;
+  @include displayCenter();
+  .dataNumbers {
+    min-height: 100vh;
+    @include displayCenter();
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .item {
+      width: 300px;
+      height: 200px;
+      background: #EEE;
+      @include displayCenter();
+      font-size: 32px;
+      font-family: inherit;
+      margin: 32px;
+      position: relative;
+      border-radius: 25px;
+      &::before{
+        position: absolute;
+        content: '';
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        border-radius: 25px;
+        background-color: gray;
+        z-index: -5;
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        top: -5px;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
+        border-radius: 25px;
+        background-color: gray;
+        z-index: -5;
+        filter: blur(10px);
+      }
+    }
+
+    .second {
+      &::before{
+        background: linear-gradient(235deg, #d40063, #d40063, #d40063);
+      }
+
+      &::after{
+        background: linear-gradient(235deg, #d40063, #d40063, #d40063);
+      }
+    }
+
+    .third {
+      &::before{
+        background: linear-gradient(235deg, #060c21, #060c21, #060c21);
+      }
+
+      &::after{
+        background: linear-gradient(235deg, #060c21, #060c21, #060c21);
+      }
+    }
+  }
+}
+
+
+.title {
+}
