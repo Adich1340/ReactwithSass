@@ -3,18 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+    "d3": "^5.15.0",
+    "leaflet": "^1.6.0",
+    "mapbox-gl": "^1.9.1",
     "node-sass": "^4.13.1",
-    "react": "^16.13.0",
+    "react": "^16.13.1",
     "react-async": "^10.0.0",
     "react-countup": "^4.3.3",
-    "react-dom": "^16.13.0",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
+    "react-leaflet": "^2.6.3",
     "react-map-gl": "^5.2.3",
     "react-pose": "^4.0.10",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "react-simple-maps": "^2.0.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "save": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "use-resize-observer": "^6.0.0"
   }
 }
