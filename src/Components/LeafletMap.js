@@ -4,7 +4,7 @@ import countriesData from '../Worldwide.json';
 import CountryData from './CountryData';
 
 function LeafletMap(props){
-  const [country, setCountry] = useState(props.mapCountry);
+  const [country, setCountry] = useState(null);
   const [index, setIndex] = useState(0);
   const [deadPre, setDeadPre] = useState(props.deadPercentage);
 
@@ -16,6 +16,10 @@ function LeafletMap(props){
       }
     });
   });
+
+console.log("PROPS FROM CLAAAS  " + props.deadPercentage)
+console.log("PROPS FROM CLAAAS COUNTRYYY " + props.mapCountry)
+
 
 
   return (
@@ -34,7 +38,7 @@ function LeafletMap(props){
 
           <CircleMarker
             center={[countriesData[index].latlng[0], countriesData[index].latlng[1]]}
-            radius={props.deadPercentage}
+            radius={props.deadPercentage*5}
             fillOpacity={0.4}
             stroke={false}
             color="#FFFF00"

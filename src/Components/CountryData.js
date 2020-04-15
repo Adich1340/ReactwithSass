@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import '../App.scss';
+import '../Styles/App.scss';
 
 import CountUp from 'react-countup';
-import LeafletMap from './LeafletMap';
+import Switch from './Switch';
 
 
 function CountryData() {
@@ -74,30 +74,34 @@ function CountryData() {
 
     <div className="container">
       <div className="main">
-        <h2 className="main-content">Covid-19 Data</h2>
         <select className="dropdown" onChange={getCountryData} >
         {renderCountryOption()}
         </select>
       </div>
-      <div className="grid-template">
-        <span className="dataNumbers">
-          <div className="item">
-            <CountUp start={0} end={confirmed} useEasing={true} separator="," decimal={3, 6}/>
-            <h3 className="title">Confirmed</h3>
-          </div>
-          <span className="item">
-            <CountUp start={0} end={recovered} useEasing={true} separator="," decimal={3, 6}/>
-            <h3 className="title">Recovered</h3>
-          </span>
-          <span className="item">
-          <CountUp start={0} end={deaths} useEasing={true} separator="," decimal={3, 6}/>
-          <h3 className="title">Deaths</h3>
-          </span>
+      <span className="dataNumbers">
+        <div className="triple-items">
+            <div className="item">
+              <CountUp start={0} end={confirmed} useEasing={true} separator="," decimal={3, 6}/>
+              <h3 className="title">Confirmed</h3>
+            </div>
+            <span className="item">
+              <CountUp start={0} end={recovered} useEasing={true} separator="," decimal={3, 6}/>
+              <h3 className="title">Recovered</h3>
+            </span>
+            <span className="item">
+            <CountUp start={0} end={deaths} useEasing={true} separator="," decimal={3, 6}/>
+            <h3 className="title">Deaths</h3>
+            </span>
+        </div>
+        <div>
+        <Switch mapCountry={currentCountry} deadPercentage={deathsPercentage} />
+        </div>
+        <div className="triple-items">
           <span className="item">
             <CountUp start={0} end={worldConfirmed}  useEasing={true} separator="," decimal={3, 6}/>
             <h3 className="title">Worldwide Confirmed</h3>
           </span>
-          <span className="item">
+            <span className="item">
             <CountUp start={0} end={worldRecovereed} useEasing={true} separator="," decimal={3, 6}/>
             <h3 className="title">Worldwide Recovered</h3>
           </span>
@@ -105,12 +109,9 @@ function CountryData() {
           <CountUp start={0} end={worldDeaths} useEasing={true} separator="," decimal={3, 6}/>
           <h3 className="title">Worldwide Deaths</h3>
           </span>
-        </span>
-        <div>
-        <LeafletMap mapCountry={currentCountry} deadPercentage={deathsPercentage}/>
         </div>
-      </div>
-   </div>
+      </span>
+    </div>
   );
 }
 
