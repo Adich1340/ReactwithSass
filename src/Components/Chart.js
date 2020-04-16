@@ -93,7 +93,7 @@ const Chart = (props) => {
 
   return (
     <div>
-      <canvas ref={chartContainer}  width="900" height="650" margin-top="100px" />
+      <canvas ref={chartContainer}  width="auto" height="650" margin-top="100px" />
     </div>
   );
 };

@@ -10,11 +10,11 @@ import CountryData from './Components/CountryData';
 import Footer from './Components/Footer';
 import About from './Components/About.js';
 
-
+import './Styles/App.scss';
 
 function App() {
   return (
-    <div >
+    <div>
       <Router>
         <div className="sideBar">
           <nav>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import '../Styles/App.scss';
-
 import CountUp from 'react-countup';
 import Switch from './Switch';
 
@@ -78,7 +76,7 @@ function CountryData() {
         {renderCountryOption()}
         </select>
       </div>
-      <span className="dataNumbers">
+      <div className="mapAndNum">
         <div className="triple-items">
             <div className="item">
               <CountUp start={0} end={confirmed} useEasing={true} separator="," decimal={3, 6}/>
@@ -110,7 +108,7 @@ function CountryData() {
           <h3 className="title">Worldwide Deaths</h3>
           </span>
         </div>
-      </span>
+      </div>
     </div>
   );
 }

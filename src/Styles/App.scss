@@ -1,127 +1,162 @@
-.container {
-  padding-bottom: 700px;
-  align-content: center;
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 50px;
 }
 
-.sideBar {
-  display: flex;
-  width: 150px;
-  background: "#f0f0f0";
+nav ul li{
+  border: 2px solid yellow;
+  box-shadow: 0 0 15px rgba(50, 50, 50, 1);
+  background: white;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul li:hover, nav ul li:active{
+  background: yellow;
+  background-color: black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 96%;
 }
 
 .main {
-  background-color: #42A5F5;
-  padding: 20px;
-  display: flex;
-  &-content{
-    margin-top: 25px;
-    margin-left: 30px;
-    margin-right: 80px;
-    font-size: 20px;
-    color: white;
-  }
+background-color: #42A5F5;
+padding: auto;
+padding-top: 1rem;
+padding-bottom: 1rem;
 }
 
 .triple-items {
   display: grid;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 }
 
 
 .leaflet-container {
-  width: 900px;
-  height: 70vh;
-  border-radius: 25px;
+width: 900px;
+height: 650px;
+border-radius: 25px;
 }
 
-
-
-
-@mixin displayCenter {
-  display: flex;
-  justify-content: center;
-}
 
 body{
-  background: #EEE;
-  font-family: 'Baloo Thambi 2', cursive;
-  .dataNumbers {
-    @include displayCenter();
+margin: 0 auto;
+background: #EEE;
+font-family: 'Baloo Thambi 2', cursive;
+.mapAndNum {
+  margin-top: 80px;
+  .item {
+    background: #191970;
+    font-size: 32px;
+    font-family: inherit;
+    padding: 2rem;
+    margin: 10px;
+    position: relative;
+    border-radius: 25px;
+    color: white;
     text-align: center;
-    height: 10px;
-    margin-top: 80px;
-    .item {
-      background: #191970;
-      font-size: 32px;
-      font-family: inherit;
-      padding: 3rem;
-      width: 150px;
-      position: relative;
+    transition: all 1s ease-out 0s;
+    &::before{
+      position: absolute;
+      content: '';
+      top: -2px;
+      bottom: -2px;
+      left: -2px;
+      right: -2px;
       border-radius: 25px;
-      margin: 10px;
-      color: white;
-      transition: all 1s ease-out 0s;
-      &::before{
-        position: absolute;
-        content: '';
-        top: -2px;
-        bottom: -2px;
-        left: -2px;
-        right: -2px;
-        border-radius: 25px;
-        background-color: #87CEEB;
-        z-index: -5;
-      }
-      &::after{
-        position: absolute;
-        content: '';
-        top: -5px;
-        bottom: -5px;
-        left: -5px;
-        right: -5px;
-        border-radius: 25px;
-        z-index: -5;
-      }
+      background-color: #87CEEB;
+      z-index: -5;
     }
-    .item:hover{
-      font-size: 46px;
-      color: yellow;
+    &::after{
+      position: absolute;
+      content: '';
+      top: -5px;
+      bottom: -5px;
+      left: -5px;
+      right: -5px;
+      border-radius: 25px;
+      z-index: -5;
     }
   }
+  .item:hover{
+    font-size: 40px;
+    color: yellow;
+  }
+}
 }
 
 
 
 
 .title {
-  font-size: 14px;
-  font-family: 'Baloo Thambi 2', cursive;
+font-size: 14px;
+font-family: 'Baloo Thambi 2', cursive;
+align-content: center;
 }
 
-div .dropdown{
-  margin: 1em;
-  padding: 0.8em;
-  font-size: 14px;
+div .dropdown {
+padding:10px;
+font-size: 14px;
+display: flex;
+margin-left: auto;
+margin-right: auto;
 }
 
 
 .main-footer{
-  background: #42A5F5;
-  flex-shrink: 0;
-  padding: 10px;
-  padding-top: 50px;
-  color: white;
-  text-align: center;
-  margin: 0;
-  font-size: 20px;
+background: #42A5F5;
+flex-shrink: 0;
+padding: 10px;
+padding-top: 50px;
+color: white;
+text-align: center;
+margin: 0;
+font-size: 20px;
 }
 
 .second-footer{
-  text-align: center;
-  flex-shrink: 0;
-  background: #191970;
-  padding: 40px;
-  color: white;
+text-align: center;
+flex-shrink: 0;
+background: #191970;
+padding: 40px;
+color: white;
 
+}
+
+@media screen and (max-width: 480px){
+
+  .leaflet-container {
+  margin: 2.5%;
+  width: auto;
+  height: 500px;
+  border-radius: 25px;
+  }
+
+  .triple-items {
+    display: grid;
+    width: 100%;
+  }
+
+  .mapAndNum {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    .item {
+      height: inherit;
+      font-size: 20px;
+      height: 10vh;
+
+    }
+  }
 }
