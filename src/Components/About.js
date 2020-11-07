@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
-function About() {
+const About = () => {
   return (
     <div>
-      <h1>SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</h1>
+      <h1>Welcome to CoronaApp</h1>
     </div>
   )
 }

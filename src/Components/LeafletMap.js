@@ -1,30 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Map, Marker, Popup, TileLayer, CircleMarker, Tooltip } from 'react-leaflet';
+import React, { useState, useEffect } from 'react';
+import {Map,
+   Marker,
+   TileLayer,
+   CircleMarker,
+   Tooltip} from 'react-leaflet';
 import countriesData from '../Worldwide.json';
-import CountryData from './CountryData';
 
-function LeafletMap(props){
+
+
+const LeafletMap = props => {
   const [country, setCountry] = useState(null);
   const [index, setIndex] = useState(0);
-  const [deadPre, setDeadPre] = useState(props.deadPercentage);
 
   useEffect(() => {
     setCountry(props.mapCountry);
-    countriesData.find(function(item, i){
+    countriesData.find((item, index) => {
       if(item.name === country){
-        setIndex(i);
+        setIndex(index);
       }
     });
   });
 
-console.log("PROPS FROM CLAAAS  " + props.deadPercentage)
-console.log("PROPS FROM CLAAAS COUNTRYYY " + props.mapCountry)
-
-
-
   return (
     <div className="mapbox">
-      <Map center={[-0.09, 51.505]} zoom={2}>
+      <Map center={[0, 0]} zoom={2}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -50,6 +49,6 @@ console.log("PROPS FROM CLAAAS COUNTRYYY " + props.mapCountry)
       </Map>
     </div>
   )
-}
+};
 
 export default LeafletMap;

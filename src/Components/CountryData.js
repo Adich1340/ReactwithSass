@@ -66,10 +66,9 @@ function CountryData() {
       }
   }
 
-  {var deathsPercentage = (({deaths} === 0) || ({recovered} === 0)) ? "No data confirmed" : (((deaths) / (confirmed)) * 100).toFixed(3)};
+  var deathsPercentage = (({deaths} === 0) || ({recovered} === 0)) ? "No data confirmed" : (((deaths) / (confirmed)) * 100).toFixed(3);
 
   return (
-
     <div className="container">
       <div className="main">
         <select className="dropdown" onChange={getCountryData} >
@@ -78,17 +77,17 @@ function CountryData() {
       </div>
       <div className="mapAndNum">
         <div className="triple-items">
-            <div className="item">
+            <span className="item">
               <CountUp start={0} end={confirmed} useEasing={true} separator="," decimal={3, 6}/>
               <h3 className="title">Confirmed</h3>
-            </div>
+            </span>
             <span className="item">
               <CountUp start={0} end={recovered} useEasing={true} separator="," decimal={3, 6}/>
               <h3 className="title">Recovered</h3>
             </span>
             <span className="item">
-            <CountUp start={0} end={deaths} useEasing={true} separator="," decimal={3, 6}/>
-            <h3 className="title">Deaths</h3>
+              <CountUp start={0} end={deaths} useEasing={true} separator="," decimal={3, 6}/>
+              <h3 className="title">Deaths</h3>
             </span>
         </div>
         <div>
