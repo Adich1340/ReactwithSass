@@ -20,18 +20,18 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/home">Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/dashbord">Dashbord</Link>
               </li>
             </ul>
           </nav>
           <Switch>
-            <Route path="/home">
+            <Route path="/dashbord">
               <CountryData />
             </Route>
-            <Route path="/about">
+            <Route path="/">
               <About />
             </Route>
           </Switch>

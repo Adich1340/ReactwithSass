@@ -10,7 +10,7 @@ nav ul li{
   background: white;
   padding: 10px 30px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
   border-radius: 10px;
   text-decoration: none;
   margin-left: auto;
@@ -19,7 +19,29 @@ nav ul li{
 
 nav ul li:hover, nav ul li:active{
   background: yellow;
-  background-color: black;
+  background-color: #191970;
+}
+
+
+nav ul li a,  nav ul li a{
+  color: #191970;
+  text-decoration: none;
+}
+
+.welcomApp{
+  color: white;
+  margin: 70px 500px 70px 500px;
+}
+
+h1, h2, h3{
+  color: white;
+  margin: 70px 500px 70px 500px;
+}
+
+
+nav ul li a:hover,  nav ul li a:active{
+  color: white;
+  text-decoration: none;
 }
 
 .container {
@@ -43,7 +65,7 @@ padding-bottom: 1rem;
 
 
 .leaflet-container {
-width: 900px;
+width:  650px;
 height: 650px;
 border-radius: 25px;
 }
@@ -51,14 +73,17 @@ border-radius: 25px;
 
 body{
 margin: 0 auto;
-background: #EEE;
+background: #191970;
 font-family: 'Baloo Thambi 2', cursive;
+.mapAndChart{
+  display: flex;
+}
 .mapAndNum {
   margin-top: 80px;
   display: flex;  
   .item {
     background: #191970;
-    font-size: 32px;
+    font-size: 16px;
     font-family: inherit;
     padding: 2rem;
     margin: 10px;
@@ -96,11 +121,11 @@ font-family: 'Baloo Thambi 2', cursive;
 }
 }
 
-
-
+p {
+  font-size: 18px;
+}
 
 .title {
-font-size: 14px;
 font-family: 'Baloo Thambi 2', cursive;
 align-content: center;
 }
@@ -122,6 +147,7 @@ padding-top: 50px;
 color: white;
 text-align: center;
 margin: 0;
+margin-top: 20px;
 font-size: 20px;
 }
 
@@ -138,7 +164,7 @@ color: white;
 
   .leaflet-container {
   margin: 2.5%;
-  width: auto;
+  width: 50%;
   height: 500px;
   border-radius: 25px;
   }

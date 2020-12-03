@@ -6,8 +6,6 @@ import {Map,
    Tooltip} from 'react-leaflet';
 import countriesData from '../Worldwide.json';
 
-
-
 const LeafletMap = props => {
   const [country, setCountry] = useState(null);
   const [index, setIndex] = useState(0);
